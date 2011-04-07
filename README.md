@@ -3,19 +3,15 @@ RPC Echo Application
 
 To compile the client:
 ----------------------
-<code>
-gcc -c test_clnt.c
-gcc -c client.c
-gcc -o client client.o test_clnt.o
-</code>
+* <code>gcc -c test_clnt.c</code>
+* <code>gcc -c client.c</code>
+* <code>gcc -o client client.o test_clnt.o</code>
 
 To compile the server:
 ----------------------
-<code>
-gcc -c test_svc.c
-gcc -c server.c
-gcc -o server server.o test_svc.o
-</code>
+* <code>gcc -c test_svc.c</code>
+* <code>gcc -c server.c</code
+* <code>gcc -o server server.o test_svc.o</code>
 
 Client Usage:
 -------------
