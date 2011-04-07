@@ -10,7 +10,7 @@ To compile the client:
 To compile the server:
 ----------------------
 * <code>gcc -c test_svc.c</code>
-* <code>gcc -c server.c</code
+* <code>gcc -c server.c</code>
 * <code>gcc -o server server.o test_svc.o</code>
 
 Client Usage:
