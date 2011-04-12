@@ -16,7 +16,7 @@ int main(int argc, char**argv)
   if(i == -1)
   {
     test_exit_1(&i, cl);
-    printf("Terminated Server");
+    printf("Terminated Server\n");
     return 0;
   }
   int* result = test_proc_1(&i, cl);
