@@ -6,7 +6,7 @@ int main(int argc, char**argv)
   
   if(argc != 3)
   {
-      printf("Usage:...\n");
+      printf("Usage: ./client HOSTNAME i\n");
       return 1;
   }
 
