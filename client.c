@@ -10,7 +10,13 @@ int main(int argc, char**argv)
       return 1;
   }
 
-  cl = clnt_create(argv[1], TEST_PROG, TEST_VERS, "udp");
+  char *server_hostname = argv[1];
+  cl = clnt_create(server_hostname, TEST_PROG, TEST_VERS, "udp");
+  if(cl == NULL) {
+    clnt_pcreateerror("Error creating client");
+    exit(EXIT_FAILURE);
+  }
+
   int i = atoi(argv[2]);
   
   if(i == -1)
