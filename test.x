@@ -1,4 +1,3 @@
-
 program TEST_PROG
 {
 	version TEST_VERS
@@ -7,5 +6,3 @@ program TEST_PROG
 		void TEST_EXIT(int) = 2;
 	} = 1;
 } = 0x21140000;
-
-
