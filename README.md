@@ -18,4 +18,4 @@ Client Usage:
 * <code>./client HOSTNAME i</code>
 * HOSTNAME is the address of the machine where server is running, i.e. eecslinab.case.edu
 * i is any integer value
-* if i == -1, this tells the server to terminate: <code>./client HOSTNAME -1</code>
+* If i == -1, this tells the server to terminate: <code>./client HOSTNAME -1</code>
