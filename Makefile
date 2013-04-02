@@ -1,10 +1,10 @@
-CC = gcc
+CC = clang
 # -g : allows use of GNU Debugger
 # -Wall : show all warnings
-FLAGS = -g -Wall
+CFLAGS = -g -Wall
 LIBS = # None yet...
-CSOURCE = client.c test_clnt.c test.h
-SSOURCE = server.c test_svc.c test.h
+CSOURCE = client.c test_clnt.c
+SSOURCE = server.c test_svc.c
 RPCSRC = test.x
 RPCGEN = test.h test_clnt.c test_svc.c
 CLIENT = client
@@ -12,15 +12,13 @@ SERVER = server
 
 all: $(CLIENT) $(SERVER)
 
-client: rpc $(CSOURCE)
-	$(CC) $(LIBS) $(FLAGS) -o $(CLIENT) $(CSOURCE)
-	chmod 755 $(CLIENT)
+client: $(CSOURCE) $(RPCGEN)
+	$(CC) $(LIBS) $(CFLAGS) -o $(CLIENT) $(CSOURCE)
 
-server: rpc $(SSOURCE)
-	$(CC) $(LIBS) $(FLAGS) -o $(SERVER) $(SSOURCE)
-	chmod 755 $(SERVER)
+server: $(SSOURCE) $(RPCGEN)
+	$(CC) $(LIBS) $(CFLAGS) -o $(SERVER) $(SSOURCE)
 
-rpc: $(RPCSRC)
+$(RPCGEN): $(RPCSRC)
 	rpcgen $(RPCSRC)
 
 # 'clean' rule for remove non-source files
