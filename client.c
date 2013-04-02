@@ -17,15 +17,15 @@ int main(int argc, char**argv)
 		exit(EXIT_FAILURE);
 	}
 
-	int i = atoi(argv[2]);
+	struct test_info t = {atoi(argv[2]), 9999};
 
-	if(i == -1)
+	if(t.one == -1)
 	{
-		test_exit_1(&i, cl);
+		test_exit_1(&t, cl);
 		printf("Terminated Server\n");
 		return 0;
 	}
-	int* result = test_proc_1(&i, cl);
+	int* result = test_proc_1(&t, cl);
 	printf("Received result %d\n", *result);
 	clnt_destroy(cl);
 	return 0;

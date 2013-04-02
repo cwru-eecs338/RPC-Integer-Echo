@@ -3,10 +3,10 @@ CC = clang
 # -Wall : show all warnings
 CFLAGS = -g -Wall
 LIBS = # None yet...
-CSOURCE = client.c test_clnt.c
-SSOURCE = server.c test_svc.c
+CSOURCE = client.c test_clnt.c test_xdr.c
+SSOURCE = server.c test_svc.c test_xdr.c
 RPCSRC = test.x
-RPCGEN = test.h test_clnt.c test_svc.c
+RPCGEN = test.h test_clnt.c test_svc.c test_xdr.c
 CLIENT = client
 SERVER = server
 
