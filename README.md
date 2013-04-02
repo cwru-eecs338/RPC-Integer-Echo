@@ -1,13 +1,21 @@
 RPC Echo Application
 ====================
 
-To compile the client:
+Normal compilation:
+----------------------
+* <code>make</code>
+
+To manually generate the C code for the RPC protocol:
+----------------------
+* <code>rpcgen test.x</code>
+
+To manually compile the client:
 ----------------------
 * <code>gcc -c test_clnt.c</code>
 * <code>gcc -c client.c</code>
 * <code>gcc -o client client.o test_clnt.o</code>
 
-To compile the server:
+To manually compile the server:
 ----------------------
 * <code>gcc -c test_svc.c</code>
 * <code>gcc -c server.c</code>
