@@ -3,3 +3,4 @@ test_svc.c
 test.h
 server
 client
+test_xdr.c
