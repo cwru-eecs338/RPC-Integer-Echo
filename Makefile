@@ -12,10 +12,10 @@ SERVER = server
 
 all: $(CLIENT) $(SERVER)
 
-client: $(CSOURCE) $(RPCGEN)
+$(CLIENT): $(CSOURCE) $(RPCGEN)
 	$(CC) $(LIBS) $(CFLAGS) -o $(CLIENT) $(CSOURCE)
 
-server: $(SSOURCE) $(RPCGEN)
+$(SERVER): $(SSOURCE) $(RPCGEN)
 	$(CC) $(LIBS) $(CFLAGS) -o $(SERVER) $(SSOURCE)
 
 $(RPCGEN): $(RPCSRC)
